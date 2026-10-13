@@ -2,10 +2,10 @@ import { DocsLayout, DocsSection } from '../components/ui/DocsLayout';
 
 export default function PrivacyPage() {
   return (
-    <DocsLayout slug="introduction" title="Privacy policy" lede="How RepoPilot handles repository, account, and usage data.">
+    <DocsLayout slug="introduction" title="Privacy policy" lede="How RepoGuide AI handles repository, account, and usage data.">
       <DocsSection title="Data we process">
         <p>
-          RepoPilot processes GitHub repository metadata and source content that you submit or authorize,
+          RepoGuide AI processes GitHub repository metadata and source content that you submit or authorize,
           plus account identity data needed to provide the service. Public repositories can be analyzed without
           a GitHub account.
         </p>
@@ -18,7 +18,7 @@ export default function PrivacyPage() {
       </DocsSection>
       <DocsSection title="Retention and requests">
         <p>
-          Indexed repository data is retained while it is needed to provide the service. Contact the RepoPilot
+          Indexed repository data is retained while it is needed to provide the service. Contact the RepoGuide AI
           team through the project owner to request deletion or ask questions about your data.
         </p>
       </DocsSection>

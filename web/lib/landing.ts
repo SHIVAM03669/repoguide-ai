@@ -1,4 +1,4 @@
-export const LANDING_BRAND = 'RepoPilot';
+export const LANDING_BRAND = 'RepoGuide AI';
 
 export const LANDING_HEADLINE = 'Understand your repository — with evidence';
 
@@ -14,7 +14,7 @@ export const LANDING_HOW_IT_WORKS = [
   {
     id: 'index',
     title: 'Index once',
-    body: 'RepoPilot clones, parses, builds the graph, embeds search, and ingests history.'
+    body: 'RepoGuide AI clones, parses, builds the graph, embeds search, and ingests history.'
   },
   {
     id: 'investigate',

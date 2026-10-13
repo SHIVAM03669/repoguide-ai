@@ -33,7 +33,7 @@ export default function DocsGettingStartedPage() {
             Go to the <Link href="/">home page</Link> and paste a GitHub URL or <code>owner/repo</code> slug.
           </li>
           <li>
-            RepoPilot registers the repository, clones or reads files, and starts indexing in the background.
+            RepoGuide AI registers the repository, clones or reads files, and starts indexing in the background.
           </li>
           <li>
             When indexing completes, you land on the dashboard at{' '}
@@ -93,7 +93,7 @@ export default function DocsGettingStartedPage() {
           selected.
         </p>
 
-        <h3>Ask RepoPilot</h3>
+        <h3>Ask RepoGuide AI</h3>
         <p>
           Natural-language answers with file:line citations. Open Graph, Impact, or GitHub from any citation chip.
           Requires an LLM provider (<code>GROQ_API_KEY</code>, <code>GEMINI_API_KEY</code>, or local Ollama) in{' '}

@@ -21,7 +21,7 @@ export function CookieConsent() {
       <div>
         <strong>Privacy choices</strong>
         <p>
-          RepoPilot uses optional anonymous product analytics to improve navigation and conversion flows. You can
+          RepoGuide AI uses optional anonymous product analytics to improve navigation and conversion flows. You can
           accept or decline; essential session cookies work either way.
         </p>
         <Link href="/privacy">Read the privacy policy</Link>

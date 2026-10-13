@@ -60,7 +60,7 @@ export function ImpactTestPlanPanel({ tests, testPlan }: ImpactTestPlanPanelProp
             {hint ?? 'Copy run commands'}
           </button>
           <p className="ui-impact-test-plan__note">
-            RepoPilot classifies and hands off — it does not execute tests remotely.
+            RepoGuide AI classifies and hands off — it does not execute tests remotely.
           </p>
         </div>
       ) : null}

@@ -58,10 +58,7 @@ export default defineConfig({
           name: 'api',
           root: repoRoot,
           environment: 'node',
-          include: [
-            path.join(repoRoot, 'tests/**/*.test.ts'),
-            path.join(repoRoot, 'api/**/*.test.ts')
-          ]
+          include: ['tests/**/*.test.ts', 'api/**/*.test.ts']
         }
       },
       {
@@ -69,7 +66,7 @@ export default defineConfig({
           name: 'common',
           root: repoRoot,
           environment: 'node',
-          include: [path.join(repoRoot, 'common/**/*.test.ts')]
+          include: ['common/**/*.test.ts']
         }
       },
       {

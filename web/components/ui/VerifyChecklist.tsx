@@ -103,7 +103,7 @@ export function VerifyChecklist({
         ))}
       </ul>
       <p className="ui-verify-checklist__note">
-        Tick after you run each command locally — RepoPilot does not execute tests.
+        Tick after you run each command locally — RepoGuide AI does not execute tests.
       </p>
     </div>
   );

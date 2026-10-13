@@ -46,7 +46,7 @@ export type ImpactAnalysisResult = {
     overlapCount: number;
     similarity?: number;
   }>;
-  /** Classified local run commands for recommended tests (not executed by RepoPilot). */
+  /** Classified local run commands for recommended tests (not executed by RepoGuide AI). */
   testPlan: ImpactTestPlan;
   hotspot: { score: number; changeCount: number; reasons: string[] } | null;
   checklist: string[];

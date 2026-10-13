@@ -80,7 +80,7 @@ export default function ShortRepoPage() {
       shellClassName="landing-shell"
       seo={{
         title: slug ? `Opening ${slug}` : 'Opening repository',
-        description: 'Start indexing a public GitHub repository in RepoPilot.',
+        description: 'Start indexing a public GitHub repository in RepoGuide AI.',
         path: slug ? `/${slug}` : '/',
         noIndex: true
       }}

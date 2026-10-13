@@ -1,6 +1,6 @@
 # Product Implementation Status
 
-**Master prompt:** RepoPilot World-Class Product + UI/UX  
+**Master prompt:** RepoGuide AI World-Class Product + UI/UX
 **Status:** Phase 0–35 foundation **complete** (2026-08-20)
 
 ## Shipped (current product)

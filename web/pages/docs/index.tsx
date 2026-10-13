@@ -7,13 +7,13 @@ export default function DocsIntroductionPage() {
     <DocsLayout
       slug="introduction"
       title="Introduction"
-      lede="RepoPilot indexes Git repositories and turns them into engineering intelligence — real dependency graphs, search, impact analysis, and evidence-backed answers."
+      lede="RepoGuide AI indexes Git repositories and turns them into engineering intelligence — real dependency graphs, search, impact analysis, and evidence-backed answers."
     >
-      <DocsSection title="What RepoPilot does">
+      <DocsSection title="What RepoGuide AI does">
         <p>{DIFFERENTIATOR_TAGLINE}</p>
         <p>
           Paste any public GitHub URL on the home page, or connect GitHub to index private repositories.
-          RepoPilot parses source files with Tree-sitter, builds module and symbol dependency graphs, indexes
+          RepoGuide AI parses source files with Tree-sitter, builds module and symbol dependency graphs, indexes
           searchable code chunks with embeddings, and ingests git history for hotspot analysis.
         </p>
       </DocsSection>
@@ -29,7 +29,7 @@ export default function DocsIntroductionPage() {
       </DocsSection>
 
       <DocsSection title="How it is organized">
-        <p>RepoPilot is a Yarn monorepo with three packages:</p>
+        <p>RepoGuide AI is a Yarn monorepo with three packages:</p>
         <ul>
           <li>
             <strong>@repopilot/web</strong> — Next.js dashboard and public marketing shell (port 3000)

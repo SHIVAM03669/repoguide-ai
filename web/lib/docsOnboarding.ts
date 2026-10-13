@@ -34,7 +34,7 @@ export const ONBOARDING_STEPS: OnboardingStep[] = [
   {
     id: 'agents',
     title: 'Connect an MCP client',
-    detail: 'Point your editor at RepoPilot MCP for search, impact, and Ask against the same index.',
+    detail: 'Point your editor at RepoGuide AI MCP for search, impact, and Ask against the same index.',
     href: '/docs/mcp'
   }
 ];

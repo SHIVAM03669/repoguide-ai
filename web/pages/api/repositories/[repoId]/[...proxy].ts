@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
+  AI_REQUEST_TIMEOUT_MS,
   assertRepoSession,
   proxyApiRequest,
   repositoryProxyForwardQuery,
@@ -72,7 +73,8 @@ export default async function handler(
     init.body = JSON.stringify(req.body);
   }
 
-  const response = await proxyApiRequest(apiPath, init);
+  const isAiRequest = head === 'ask' || (head === 'pulls' && subPath.endsWith('/review'));
+  const response = await proxyApiRequest(apiPath, init, isAiRequest ? AI_REQUEST_TIMEOUT_MS : undefined);
   const contentType = response.headers.get('content-type') ?? '';
   res.status(response.status);
   if (contentType.includes('application/json')) {

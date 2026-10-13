@@ -135,7 +135,7 @@ export default function BrowsePage() {
       seo={{
         title: 'Browse public repositories',
         description:
-          'Search public GitHub repositories and open one in RepoPilot to index graphs, hotspots, Ask, and PR review.',
+          'Search public GitHub repositories and open one in RepoGuide AI to index graphs, hotspots, Ask, and PR review.',
         path: '/browse'
       }}
     >
@@ -147,7 +147,7 @@ export default function BrowsePage() {
           </p>
         </header>
 
-        <DifferentiatorsStrip title="Why RepoPilot" showTagline />
+        <DifferentiatorsStrip title="Why RepoGuide AI" showTagline />
 
         <div className="browse-filters">
           <label>

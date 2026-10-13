@@ -2,6 +2,7 @@ import { deriveRepositoryId } from '@repopilot/common';
 import type { SessionData } from './session';
 
 export const API_REQUEST_TIMEOUT_MS = 20_000;
+export const AI_REQUEST_TIMEOUT_MS = 75_000;
 
 /**
  * Resolve the private server-to-server API origin.
@@ -17,7 +18,7 @@ export function getApiOrigin(): string {
 
   if (!origin) {
     throw new Error(
-      'RepoPilot API is not configured. Set REPOPILOT_API_URL on the web deployment.'
+      'RepoGuide AI API is not configured. Set REPOPILOT_API_URL on the web deployment.'
     );
   }
 
@@ -64,12 +65,13 @@ export function assertRepoSession(
 
 export async function proxyApiRequest(
   apiPath: string,
-  init?: RequestInit
+  init?: RequestInit,
+  timeoutMs = API_REQUEST_TIMEOUT_MS
 ): Promise<Response> {
   const url = `${getApiOrigin()}${apiPath.startsWith('/') ? apiPath : `/${apiPath}`}`;
   const headers = internalApiHeaders(init?.headers);
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), API_REQUEST_TIMEOUT_MS);
+  const timeout = setTimeout(() => controller.abort(), timeoutMs);
   try {
     return await fetch(url, { ...init, headers, signal: init?.signal ?? controller.signal });
   } finally {

@@ -47,7 +47,7 @@ export class ErrorBoundary extends Component<Props, State> {
           description={
             process.env.NODE_ENV === 'development'
               ? this.state.error.message
-              : 'The rest of RepoPilot is still available. Try again, or reload if it keeps failing.'
+              : 'The rest of RepoGuide AI is still available. Try again, or reload if it keeps failing.'
           }
           action={
             <div className="ui-error-boundary__actions">

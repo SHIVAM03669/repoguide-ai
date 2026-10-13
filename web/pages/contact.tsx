@@ -3,7 +3,7 @@ import { DocsLayout, DocsSection } from '../components/ui/DocsLayout';
 export default function ContactPage() {
   const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim();
   return (
-    <DocsLayout slug="introduction" title="Contact RepoPilot" lede="Questions about access, privacy, or the product?">
+    <DocsLayout slug="introduction" title="Contact RepoGuide AI" lede="Questions about access, privacy, or the product?">
       <DocsSection title="Support">
         {email ? (
           <p>

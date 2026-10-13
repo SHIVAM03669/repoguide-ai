@@ -39,14 +39,14 @@ export default function PublicMcpPage() {
       seo={{
         title: 'Connect Cursor / MCP',
         description:
-          'Wire RepoPilot into Cursor, Claude Desktop, or any MCP client for search, dependencies, and impact analysis.',
+          'Wire RepoGuide AI into Cursor, Claude Desktop, or any MCP client for search, dependencies, and impact analysis.',
         path: '/mcp'
       }}
     >
       <div className="page-title-block">
         <h1>Connect Cursor / MCP</h1>
         <p>
-          Wire RepoPilot into Cursor, Claude Desktop, or any MCP client so agents can search,
+          Wire RepoGuide AI into Cursor, Claude Desktop, or any MCP client so agents can search,
           trace dependencies, and run impact analysis on your indexed repo.
         </p>
       </div>

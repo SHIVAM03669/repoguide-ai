@@ -1,4 +1,4 @@
-# RepoPilot — High-Level Design (HLD)
+# RepoGuide AI — High-Level Design (HLD)
 
 **Version:** 3.1 · **Aligns with:** shipped monorepo (October 2026)
 

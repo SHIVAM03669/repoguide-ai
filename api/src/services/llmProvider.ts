@@ -107,10 +107,11 @@ export class OpenAICompatibleLLMProvider implements LLMProvider {
   }
 }
 
-export class GeminiLLMProvider implements LLMProvider {
+export class GoogleGenerateContentLLMProvider implements LLMProvider {
   constructor(
     private readonly apiKey: string,
-    private readonly model = process.env.GEMINI_CHAT_MODEL ?? 'gemini-2.5-flash'
+    private readonly model: string,
+    private readonly providerLabel: 'gemini' | 'gemma'
   ) {}
 
   async createStructuredResponse(args: {
@@ -127,30 +128,39 @@ export class GeminiLLMProvider implements LLMProvider {
       .filter(Boolean)
       .join('\n\n');
 
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/${this.model}:generateContent?key=${this.apiKey}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${this.model}:generateContent`;
     const response = await fetchWithTimeout(url, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'x-goog-api-key': this.apiKey },
       body: JSON.stringify({
         contents: [{ role: 'user', parts: [{ text: prompt }] }],
-        generationConfig: { responseMimeType: 'application/json' }
+        ...(this.providerLabel === 'gemini'
+          ? { generationConfig: { responseMimeType: 'application/json' } }
+          : {})
       })
-    });
+    }, this.providerLabel === 'gemma' ? 60_000 : undefined);
 
     if (!response.ok) {
       const errorBody = await response.text();
-      throw new Error(`LLM request failed (gemini): ${response.status} ${errorBody}`);
+      throw new Error(`LLM request failed (${this.providerLabel}): ${response.status} ${errorBody}`);
     }
 
     const payload = (await response.json()) as {
-      candidates?: Array<{ content?: { parts?: Array<{ text?: string }> } }>;
+      candidates?: Array<{ content?: { parts?: Array<{ text?: string; thought?: boolean }> } }>;
     };
-    const content = payload.candidates?.[0]?.content?.parts?.[0]?.text;
+    const content = payload.candidates?.[0]?.content?.parts
+      ?.filter((part) => !part.thought && part.text)
+      .map((part) => part.text)
+      .join('\n')
+      .trim();
     if (!content) {
-      throw new Error('Gemini response did not contain content');
+      throw new Error(`${this.providerLabel} response did not contain content`);
     }
 
-    return { provider: `gemini:${this.model}`, content };
+    const normalizedContent = this.providerLabel === 'gemma'
+      ? content.replace(/^```(?:json)?\s*\n?([\s\S]*?)\n?```$/i, '$1').trim()
+      : content;
+    return { provider: `${this.providerLabel}:${this.model}`, content: normalizedContent };
   }
 }
 
@@ -176,11 +186,11 @@ export class LocalLLMProvider implements LLMProvider {
   }
 }
 
-export type LLMProviderKind = 'openai' | 'groq' | 'gemini' | 'ollama' | 'local';
+export type LLMProviderKind = 'openai' | 'groq' | 'gemini' | 'gemma' | 'ollama' | 'local';
 
 export function resolveLLMProviderKind(): LLMProviderKind {
   const explicit = process.env.LLM_PROVIDER?.toLowerCase();
-  if (explicit === 'openai' || explicit === 'groq' || explicit === 'gemini' || explicit === 'ollama' || explicit === 'local') {
+  if (explicit === 'openai' || explicit === 'groq' || explicit === 'gemini' || explicit === 'gemma' || explicit === 'ollama' || explicit === 'local') {
     return explicit;
   }
   if (process.env.GROQ_API_KEY) return 'groq';
@@ -206,7 +216,12 @@ export function createLLMProvider(kind: LLMProviderKind = resolveLLMProviderKind
     case 'gemini': {
       const apiKey = process.env.GEMINI_API_KEY;
       if (!apiKey) throw new Error('GEMINI_API_KEY is required when LLM_PROVIDER=gemini');
-      return new GeminiLLMProvider(apiKey);
+      return new GoogleGenerateContentLLMProvider(apiKey, process.env.GEMINI_CHAT_MODEL ?? 'gemini-2.5-flash', 'gemini');
+    }
+    case 'gemma': {
+      const apiKey = process.env.GEMINI_API_KEY;
+      if (!apiKey) throw new Error('GEMINI_API_KEY is required when LLM_PROVIDER=gemma');
+      return new GoogleGenerateContentLLMProvider(apiKey, process.env.GEMMA_CHAT_MODEL ?? 'gemma-4-26b-a4b-it', 'gemma');
     }
     case 'ollama': {
       const base = process.env.OLLAMA_BASE_URL ?? 'http://127.0.0.1:11434/v1';

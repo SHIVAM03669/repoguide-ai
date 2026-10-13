@@ -1,4 +1,4 @@
-# RepoPilot — Product Requirements Document (PRD)
+# RepoGuide AI — Product Requirements Document (PRD)
 
 **Version:** 3.1 · **Status:** Current product (as shipped) · **Date:** October 2026
 
@@ -6,7 +6,7 @@
 
 ## 1. Product summary
 
-RepoPilot is an **engineering intelligence workspace** for GitHub repositories. It clones and indexes a repo, builds a **real dependency graph** from Tree-sitter AST analysis (not LLM-generated diagrams), and exposes search, impact analysis, hotspots, grounded Q&A, PR review signals, and an MCP server for IDE agents.
+RepoGuide AI is an **engineering intelligence workspace** for GitHub repositories. It clones and indexes a repo, builds a **real dependency graph** from Tree-sitter AST analysis (not LLM-generated diagrams), and exposes search, impact analysis, hotspots, grounded Q&A, PR review signals, and an MCP server for IDE agents.
 
 **North star:** Understand what a system is, what depends on what, what churns, and whether a change is risky — with answers **traceable to files and lines**.
 
@@ -27,7 +27,7 @@ Marketing site stays separate ([repopilot-pi.vercel.app](https://repopilot-pi.ve
 
 ## 3. Problem & differentiation
 
-Typical “repo diagram” tools guess architecture with an LLM. RepoPilot:
+Typical “repo diagram” tools guess architecture with an LLM. RepoGuide AI:
 
 1. **Parses** TypeScript/JavaScript with Tree-sitter  
 2. **Persists** files, symbols, imports, module/symbol edges per revision SHA  

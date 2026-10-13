@@ -45,13 +45,13 @@ export function McpConnectPanel({ context }: McpConnectPanelProps) {
         </div>
         <pre className="mcp-connect__pre mono">{config}</pre>
         <p className="mcp-connect__hint">
-          Run from your RepoPilot monorepo root. Works with Cursor, Claude Desktop, and other MCP
+          Run from your RepoGuide AI monorepo root. Works with Cursor, Claude Desktop, and other MCP
           clients that accept the same JSON shape.
         </p>
         {ctx.repositoryId ? (
           <dl className="mcp-connect__ids">
             <div>
-              <dt>RepoPilot ID</dt>
+              <dt>RepoGuide AI ID</dt>
               <dd className="mcp-connect__id-row">
                 <span className="mono">{ctx.repositoryId}</span>
                 <button

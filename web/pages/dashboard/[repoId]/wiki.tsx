@@ -242,7 +242,7 @@ export default function WikiPage() {
             action={
               base ? (
                 <Link className="ui-diagram__action" href={`${base}/ask`}>
-                  Ask RepoPilot →
+                  Ask RepoGuide AI →
                 </Link>
               ) : undefined
             }

@@ -15,7 +15,7 @@ export type Differentiator = {
   path?: string;
 };
 
-/** RepoPilot capabilities competitors do not offer — shared marketing copy. */
+/** RepoGuide AI capabilities competitors do not offer — shared marketing copy. */
 export const REPO_PILOT_DIFFERENTIATORS: Differentiator[] = [
   {
     id: 'real-graph',
@@ -62,4 +62,4 @@ export const REPO_PILOT_DIFFERENTIATORS: Differentiator[] = [
 ];
 
 export const DIFFERENTIATOR_TAGLINE =
-  'GitDiagram shows a sketch. RepoPilot indexes your repo and keeps engineering intelligence behind every view.';
+  'GitDiagram shows a sketch. RepoGuide AI indexes your repo and keeps engineering intelligence behind every view.';

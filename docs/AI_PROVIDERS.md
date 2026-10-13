@@ -1,4 +1,4 @@
-# RepoPilot — AI providers
+# RepoGuide AI — AI providers
 
 Chat (Ask / PR review) and embeddings (semantic search) are configured in `api/.env`.  
 Template: [`api/.env.example`](../api/.env.example).
@@ -37,6 +37,16 @@ LLM_PROVIDER=gemini
 GEMINI_API_KEY=...
 GEMINI_CHAT_MODEL=gemini-2.0-flash
 ```
+
+### Gemma 4
+
+```env
+LLM_PROVIDER=gemma
+GEMINI_API_KEY=your_google_ai_studio_key
+GEMMA_CHAT_MODEL=gemma-4-26b-a4b-it
+```
+
+Gemma 4 runs through Google's hosted Gemini API. `gemma-4-31b-it` is also supported. The selected chat model powers grounded Ask and PR review; embeddings remain configured separately.
 
 ### Ollama
 

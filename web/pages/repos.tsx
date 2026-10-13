@@ -111,7 +111,7 @@ export default function ReposPage() {
       shellClassName="ui-repos-shell"
       seo={{
         title: 'Choose a repository',
-        description: 'Pick a GitHub repository to open in RepoPilot.',
+        description: 'Pick a GitHub repository to open in RepoGuide AI.',
         path: '/repos',
         noIndex: true
       }}

@@ -32,7 +32,7 @@ export function SeoHead({
       <meta key="og:description" property="og:description" content={description} />
       <meta key="og:url" property="og:url" content={url} />
       <meta key="og:image" property="og:image" content={absoluteUrl('/og-image.svg')} />
-      <meta key="og:image:alt" property="og:image:alt" content="RepoPilot repository intelligence" />
+      <meta key="og:image:alt" property="og:image:alt" content="RepoGuide AI repository intelligence" />
       <meta key="twitter:card" name="twitter:card" content="summary" />
       <meta key="twitter:title" name="twitter:title" content={fullTitle} />
       <meta key="twitter:description" name="twitter:description" content={description} />

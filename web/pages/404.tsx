@@ -10,7 +10,7 @@ export default function NotFoundPage() {
       shellClassName="landing-shell"
       seo={{
         title: 'Page not found',
-        description: 'This RepoPilot page does not exist.',
+        description: 'This RepoGuide AI page does not exist.',
         path: '/404',
         noIndex: true
       }}
@@ -18,7 +18,7 @@ export default function NotFoundPage() {
       <div className="landing-card">
         <p className="landing-eyebrow">404</p>
         <h1>Page not found</h1>
-        <p className="landing-lede">That URL is not a RepoPilot page. Head home to analyze a repository.</p>
+        <p className="landing-lede">That URL is not a RepoGuide AI page. Head home to analyze a repository.</p>
         <p className="landing-footer">
           <Link href="/">Back to home</Link>
         </p>

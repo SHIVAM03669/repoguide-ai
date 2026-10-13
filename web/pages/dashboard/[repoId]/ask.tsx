@@ -181,7 +181,7 @@ export default function AskPage() {
 
         {!hasHistory && !loading ? (
           <header className="ui-ask-hero">
-            <h1>Ask RepoPilot</h1>
+            <h1>Ask RepoGuide AI</h1>
             <p>Grounded answers with file citations from your indexed codebase.</p>
           </header>
         ) : (

@@ -1,4 +1,4 @@
-# RepoPilot — Low-Level Design (LLD)
+# RepoGuide AI — Low-Level Design (LLD)
 
 **Version:** 3.1 · **Audience:** engineers changing `api/` / `web/` · **Date:** October 2026
 
@@ -132,7 +132,7 @@ IDs: repository UUID often derived as SHA-256-based UUID from `owner/repo` (`der
 | PR review | `services/prReview.ts` | Diff + policy → `pr-review-v1.txt` → findings |
 | Policy | `services/reviewPolicy.ts` | Review thresholds / rules |
 
-Providers: `groq` (OpenAI-compatible JSON object), `gemini`, `ollama`, `openai` (json_schema), `local` stub.  
+Providers: `groq` (OpenAI-compatible JSON object), `gemini`, `gemma` (Gemma 4 through the Google API), `ollama`, `openai` (json_schema), `local` stub.
 Default Groq model: `openai/gpt-oss-120b` (post–Aug 2026 deprecations).
 
 ---

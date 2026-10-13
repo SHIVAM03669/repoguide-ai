@@ -39,7 +39,7 @@ import { repoApiPath } from '../../../lib/repoApiPath';
 import type { GraphLayoutAlgo } from '../../../lib/elkLayout';
 
 const DEMO_EXPLANATION =
-  'RepoPilot compiles actual files and import edges into a readable system map. Open File graph when you need the complete module-level topology.';
+  'RepoGuide AI compiles actual files and import edges into a readable system map. Open File graph when you need the complete module-level topology.';
 
 export default function ArchitecturePage() {
   const router = useRouter();

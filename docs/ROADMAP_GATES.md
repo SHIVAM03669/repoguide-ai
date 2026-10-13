@@ -1,4 +1,4 @@
-# RepoPilot roadmap gates
+# RepoGuide AI roadmap gates
 
 **Source:** World-Class Improvements master prompt (2026-08)  
 **Rule:** Do not run all phases at once. Advance by gate.

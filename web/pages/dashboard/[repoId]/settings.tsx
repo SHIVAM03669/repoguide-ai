@@ -176,7 +176,7 @@ export default function SettingsPage() {
           <dl className="settings-dl">
             <dt>GitHub full name</dt>
             <dd>{fullName || '—'}</dd>
-            <dt>RepoPilot ID</dt>
+            <dt>RepoGuide AI ID</dt>
             <dd className="ui-settings-id-row">
               <span className="mono">{derivedId ?? '—'}</span>
               {derivedId ? (

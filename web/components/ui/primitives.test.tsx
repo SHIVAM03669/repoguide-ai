@@ -83,7 +83,7 @@ describe('ChatBubble', () => {
       </ChatBubble>
     );
     expect(assistant).toContain('ui-chat-bubble--assistant');
-    expect(assistant).toContain('RepoPilot');
+    expect(assistant).toContain('RepoGuide AI');
     expect(assistant).toContain('Answer');
   });
 });

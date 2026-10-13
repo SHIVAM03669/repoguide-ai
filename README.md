@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="docs/showcase/logo.svg" width="72" height="72" alt="RepoPilot logo" />
+  <img src="docs/showcase/logo.svg" width="72" height="72" alt="RepoGuide AI logo" />
 </p>
 
-<h1 align="center">RepoPilot</h1>
+<h1 align="center">RepoGuide AI</h1>
 
 <p align="center">
   <strong>Technical intelligence for GitHub repositories</strong><br/>
@@ -10,14 +10,9 @@
   <em>Built from AST and imports — not LLM sketches.</em>
 </p>
 
-<p align="center">
-  <a href="https://repopilot.software"><img src="https://img.shields.io/badge/Live-repopilot.software-7c3aed?style=for-the-badge" alt="Live app" /></a>
-  <a href="https://repopilot-pi.vercel.app"><img src="https://img.shields.io/badge/Marketing-repopilot--pi-a78bfa?style=for-the-badge" alt="Marketing site" /></a>
-  <a href="https://github.com/rupak1005/repopilot-app/actions"><img src="https://img.shields.io/github/actions/workflow/status/rupak1005/repopilot-app/ci.yml?branch=master&style=for-the-badge&label=CI" alt="CI" /></a>
-</p>
+> This repository is a [fork of RepoPilot](https://github.com/rupak1005/repopilot-app). The original project provides the core architecture and features. This fork adds the RepoGuide AI branding, Gemma 4 provider integration, and project/presentation documentation. The showcase screenshots and original hosted URLs belong to the upstream project; this fork has not been deployed to those URLs.
 
 <p align="center">
-  <a href="https://repopilot.software">Open the app</a> ·
   <a href="#unique-selling-points">USPs</a> ·
   <a href="#product-tour">Tour</a> ·
   <a href="#quick-start">Quick start</a> ·
@@ -27,7 +22,7 @@
 ---
 
 <p align="center">
-  <img src="docs/showcase/01-landing.png" alt="RepoPilot landing — paste a GitHub repo and analyze" width="920" />
+  <img src="docs/showcase/01-landing.png" alt="RepoGuide AI landing — paste a GitHub repo and analyze" width="920" />
 </p>
 
 <p align="center"><sub>Paste a public GitHub URL. Index once. Investigate with proof.</sub></p>
@@ -51,7 +46,7 @@
 
 ### 1 · Landing — analyze in one step
 
-Drop `owner/repo` or a GitHub URL. RepoPilot clones safely, parses the repository, builds the evidence-backed graph first, then prepares search embeddings and history in the background.
+Drop `owner/repo` or a GitHub URL. RepoGuide AI clones safely, parses the repository, builds the evidence-backed graph first, then prepares search embeddings and history in the background.
 
 <p align="center">
   <img src="docs/showcase/01-landing.png" alt="Landing page with Analyze CTA and example repos" width="880" />
@@ -65,12 +60,12 @@ Orbit a live module map. Select a file → inbound/outbound deps, impact, search
   <img src="docs/showcase/02-architecture-3d.png" alt="3D architecture graph with module inspector" width="880" />
 </p>
 
-### 3 · Ask RepoPilot — answers with citations
+### 3 · Ask RepoGuide AI — answers with citations
 
 Ask “Show architecture of the auth module.” Get a structured answer, confidence, and code you can open — not a hallucinated tour.
 
 <p align="center">
-  <img src="docs/showcase/03-ask.png" alt="Ask RepoPilot chat with medium confidence and code citations" width="880" />
+  <img src="docs/showcase/03-ask.png" alt="Ask RepoGuide AI chat with medium confidence and code citations" width="880" />
 </p>
 
 ### 4 · MCP — wire the graph into your agent
@@ -88,7 +83,7 @@ Copy JSON config. Point Cursor or Claude Desktop at this indexed repo. Agents ca
 | Area | Capabilities |
 |------|----------------|
 | **Understand** | Overview · Dependency Graph · Topography · Code Search · Wiki · Digest export · Reverse prompt |
-| **Investigate** | Impact Analysis · Ask RepoPilot · History / hotspots |
+| **Investigate** | Impact Analysis · Ask RepoGuide AI · History / hotspots |
 | **Change** | Planning · Pull Requests · Findings |
 | **Integrate** | MCP for IDE agents |
 | **System** | Settings · indexing status by revision SHA |
@@ -124,7 +119,7 @@ Languages with first-class AST edges today: **TypeScript, JavaScript, Python, Go
 | App | Next.js, neo-brutalist design system |
 | API | Fastify, Prisma, Tree-sitter |
 | Data | Postgres + pgvector, Redis |
-| AI | Configurable chat (e.g. Groq) + local embeddings by default |
+| AI | Gemma 4 for grounded Ask and PR review; local embeddings by default |
 | Agents | Model Context Protocol (MCP) |
 | Deploy | Vercel (web) · Railway/Render (API) · Neon · Upstash |
 
@@ -155,12 +150,12 @@ yarn --cwd web dev    # http://localhost:3000
 | `api/.env` | `DATABASE_URL`, Redis, `PORT=3001`, `INDEX_INLINE=true` |
 | `web/.env.local` | `REPOPILOT_API_URL=http://localhost:3001`, `SESSION_SECRET`; `SESSION_COOKIE_SECURE=false` only for HTTP-based local/E2E servers |
 
-Optional free Ask stack:
+Gemma 4 Ask and PR review stack (Google AI Studio key required):
 
 ```env
-LLM_PROVIDER=groq
-GROQ_API_KEY=gsk_...
-GROQ_CHAT_MODEL=openai/gpt-oss-120b
+LLM_PROVIDER=gemma
+GEMINI_API_KEY=your_google_ai_studio_key
+GEMMA_CHAT_MODEL=gemma-4-26b-a4b-it
 EMBEDDING_PROVIDER=local
 ```
 
@@ -211,6 +206,7 @@ yarn ci    # lint → type-check → build → coverage → e2e
 
 | Doc | Purpose |
 |-----|---------|
+| [docs/PROJECT_GUIDE.md](docs/PROJECT_GUIDE.md) | Plain-English use case, workflow, features, architecture, and demo boundaries |
 | [docs/PRD.md](docs/PRD.md) | Product requirements |
 | [docs/HLD.md](docs/HLD.md) | System design |
 | [docs/LLD.md](docs/LLD.md) | Modules & APIs |

@@ -1,4 +1,4 @@
-# RepoPilot Design System — Master
+# RepoGuide AI Design System — Master
 
 **Design read:** Developer tool with **neo-brutalist tactile hierarchy** — technical, confident, purple/lavender surfaces, hard offset shadows, evidence-dense dashboard. Not a visual clone of any reference product.
 

@@ -80,12 +80,12 @@ export function PublicSiteHeader({ active }: PublicSiteHeaderProps) {
 
   return (
     <header className="public-header">
-      <Link href="/" className="public-header__brand" aria-label="RepoPilot home">
+      <Link href="/" className="public-header__brand" aria-label="RepoGuide AI home">
         <span className="public-header__mark" aria-hidden>
           <svg viewBox="0 0 32 32" width="20" height="20" fill="none"><path d="M8 7v18M8 16h7M15 16V9h9M15 16v8h9" stroke="currentColor" strokeWidth="2.2" strokeLinecap="square" /><circle cx="8" cy="7" r="2.5" fill="currentColor" /><circle cx="15" cy="16" r="2.5" fill="currentColor" /><circle cx="24" cy="9" r="2.5" fill="currentColor" /><circle cx="24" cy="24" r="2.5" fill="currentColor" /></svg>
         </span>
         <span className="public-header__title">
-          Repo<span className="public-header__accent">Pilot</span>
+          Repo<span className="public-header__accent">Guide AI</span>
         </span>
       </Link>
 

@@ -10,7 +10,7 @@ export function ThinkingBubble({ label = 'Thinking' }: ThinkingBubbleProps) {
     <div className="ui-chat-bubble ui-chat-bubble--assistant ui-thinking-bubble" role="status" aria-live="polite">
       <div className="ui-chat-bubble__head">
         <Lightning size={16} weight="fill" aria-hidden />
-        <span className="label-caps">RepoPilot</span>
+        <span className="label-caps">RepoGuide AI</span>
       </div>
       <div className="ui-chat-bubble__body ui-thinking-bubble__body">
         <span className="ui-typing-dots" aria-hidden>

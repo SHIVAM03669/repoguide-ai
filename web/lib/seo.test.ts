@@ -28,6 +28,6 @@ describe('seo', () => {
     expect(robots).toContain('Disallow: /api/');
     expect(robots).toContain('Sitemap: https://app.example/sitemap.xml');
     expect(sitemapXml()).toContain(`<loc>https://app.example/docs/mcp</loc>`);
-    expect(SITE_NAME).toBe('RepoPilot');
+    expect(SITE_NAME).toBe('RepoGuide AI');
   });
 });

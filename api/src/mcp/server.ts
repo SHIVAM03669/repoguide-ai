@@ -219,10 +219,10 @@ async function main() {
 
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error(`RepoPilot MCP server ready for repository ${repositoryId}`);
+  console.error(`RepoGuide AI MCP server ready for repository ${repositoryId}`);
 }
 
 main().catch((error) => {
-  console.error('RepoPilot MCP server failed:', error);
+  console.error('RepoGuide AI MCP server failed:', error);
   process.exit(1);
 });

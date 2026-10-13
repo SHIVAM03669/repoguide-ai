@@ -9,7 +9,7 @@ export default function DocsDesignSystemPage() {
     >
       <DocsSection title="Design philosophy">
         <p>
-          RepoPilot uses a GitDiagram-inspired neo-brutalist system: high-contrast borders, offset hard shadows,
+          RepoGuide AI uses a GitDiagram-inspired neo-brutalist system: high-contrast borders, offset hard shadows,
           bold typography, and a purple-tinted marketing shell. The dashboard shifts to a calmer canvas layer for
           dense data views.
         </p>

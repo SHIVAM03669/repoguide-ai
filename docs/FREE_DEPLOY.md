@@ -1,6 +1,6 @@
-# RepoPilot — free deploy guide ($0/month MVP)
+# RepoGuide AI — free deploy guide ($0/month MVP)
 
-Deploy RepoPilot using free tiers. **Marketing stays separate** at [repopilot-pi.vercel.app](https://repopilot-pi.vercel.app/) — this guide deploys the **app** and **API** only.
+Deploy RepoGuide AI using free tiers. **Marketing stays separate** at [repopilot-pi.vercel.app](https://repopilot-pi.vercel.app/) — this guide deploys the **app** and **API** only.
 
 **Production app URL:** [https://repopilot.software](https://repopilot.software) — see [PRODUCTION_DOMAIN.md](./PRODUCTION_DOMAIN.md) for DNS and cutover.
 

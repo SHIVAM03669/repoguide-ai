@@ -115,7 +115,7 @@ export function DashboardLayout({ activeNav, canvasClass, children }: DashboardL
         >
           <SeoHead
             title={`${DASHBOARD_TITLES[activeNav]} · ${ctx.repoFullName}`}
-            description={`Indexed view of ${ctx.repoFullName} in RepoPilot.`}
+            description={`Indexed view of ${ctx.repoFullName} in RepoGuide AI.`}
             path={`/dashboard/${ctx.repoId}`}
             noIndex
           />

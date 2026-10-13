@@ -1,4 +1,4 @@
-# RepoPilot — local setup
+# RepoGuide AI — local setup
 
 ## Prerequisites
 
@@ -29,12 +29,12 @@ Minimum local values:
 | `api/.env` | `DATABASE_URL`, Redis (`REDIS_HOST`/`REDIS_PORT` or `REDIS_URL`), `PORT=3001`, `INDEX_INLINE=true` |
 | `web/.env.local` | `REPOPILOT_API_URL=http://localhost:3001`, `SESSION_SECRET` (any long random string) |
 
-For Ask / PR review, set a chat provider (see [AI_PROVIDERS.md](./AI_PROVIDERS.md)). Recommended free stack:
+For Ask / PR review, set a chat provider (see [AI_PROVIDERS.md](./AI_PROVIDERS.md)). Gemma 4 stack:
 
 ```env
-LLM_PROVIDER=groq
-GROQ_API_KEY=gsk_...
-GROQ_CHAT_MODEL=openai/gpt-oss-120b
+LLM_PROVIDER=gemma
+GEMINI_API_KEY=your_google_ai_studio_key
+GEMMA_CHAT_MODEL=gemma-4-26b-a4b-it
 EMBEDDING_PROVIDER=local
 ```
 

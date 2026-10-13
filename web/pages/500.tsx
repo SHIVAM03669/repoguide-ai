@@ -10,7 +10,7 @@ export default function ServerErrorPage() {
       shellClassName="landing-shell"
       seo={{
         title: 'Something went wrong',
-        description: 'RepoPilot could not complete that request.',
+        description: 'RepoGuide AI could not complete that request.',
         path: '/500',
         noIndex: true
       }}

@@ -5,7 +5,7 @@ export default function DocsArchitecturePage() {
     <DocsLayout
       slug="architecture"
       title="Architecture"
-      lede="How RepoPilot indexes repositories, stores graph data, and serves intelligence features."
+      lede="How RepoGuide AI indexes repositories, stores graph data, and serves intelligence features."
     >
       <DocsSection title="High-level flow">
         <DocsCode>{`GitHub URL / local path

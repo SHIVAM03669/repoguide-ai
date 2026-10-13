@@ -239,7 +239,7 @@ export function demoAskResponse(query: string): AskResponse {
   if (q.includes('architect')) {
     return {
       answer:
-        'RepoPilot splits into api (Fastify + Prisma + Redis jobs), web (Next.js dashboard), and common (shared IDs). The dashboard loads repo metrics via useRepoData; Ask and Search hit the API with the derived repository UUID from the GitHub slug.',
+        'RepoGuide AI splits into api (Fastify + Prisma + Redis jobs), web (Next.js dashboard), and common (shared IDs). The dashboard loads repo metrics via useRepoData; Ask and Search hit the API with the derived repository UUID from the GitHub slug.',
       confidence: 'MEDIUM',
       citations: [
         { file: 'web/lib/dashboard.tsx', lines: [72, 118] },
@@ -438,7 +438,7 @@ export function demoWikiPages(): Array<{
     },
     {
       path: 'README.md',
-      title: 'RepoPilot',
+      title: 'RepoGuide AI',
       kind: 'readme',
       excerpt: 'Grounded codebase intelligence for architecture, impact, and agent workflows.'
     },
@@ -525,7 +525,7 @@ API syncs the index; the web dashboard consumes graph, impact, and Ask endpoints
 - \`web/\` — Next.js dashboard
 - \`common/\` — shared IDs and types
 `,
-    'README.md': `# RepoPilot
+    'README.md': `# RepoGuide AI
 
 Grounded codebase intelligence for architecture, impact, and agent workflows.
 

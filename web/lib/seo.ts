@@ -1,6 +1,6 @@
 import { DOCS_NAV } from './docsNav';
 
-export const SITE_NAME = 'RepoPilot';
+export const SITE_NAME = 'RepoGuide AI';
 
 export const DEFAULT_DESCRIPTION =
   'Index a GitHub repository for real dependency graphs, impact analysis, hotspots, grounded Ask, and evidence-backed PR review.';

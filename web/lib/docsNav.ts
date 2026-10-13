@@ -19,7 +19,7 @@ export const DOCS_NAV: DocNavItem[] = [
     slug: 'introduction',
     href: '/docs',
     title: 'Introduction',
-    summary: 'What RepoPilot is and how the pieces fit together.'
+    summary: 'What RepoGuide AI is and how the pieces fit together.'
   },
   {
     slug: 'getting-started',
@@ -55,7 +55,7 @@ export const DOCS_NAV: DocNavItem[] = [
     slug: 'mcp',
     href: '/docs/mcp',
     title: 'MCP for agents',
-    summary: 'Connect RepoPilot tools to Cursor, Claude Desktop, or other MCP clients.'
+    summary: 'Connect RepoGuide AI tools to Cursor, Claude Desktop, or other MCP clients.'
   }
 ];
 

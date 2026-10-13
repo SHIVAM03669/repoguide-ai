@@ -8,13 +8,13 @@ export const MCP_SETUP_STEPS = [
     id: 'index',
     title: 'Index the repository',
     body:
-      'RepoPilot MCP reads from your indexed Postgres data. Open a repo in the dashboard and wait until indexing finishes before connecting an agent.'
+      'RepoGuide AI MCP reads from your indexed Postgres data. Open a repo in the dashboard and wait until indexing finishes before connecting an agent.'
   },
   {
     id: 'config',
     title: 'Add the MCP server to Cursor',
     body:
-      'In your RepoPilot checkout, copy .cursor/mcp.json.example to .cursor/mcp.json (or merge the repopilot block into Cursor Settings → MCP).'
+      'In your RepoGuide AI checkout, copy .cursor/mcp.json.example to .cursor/mcp.json (or merge the repopilot block into Cursor Settings → MCP).'
   },
   {
     id: 'env',

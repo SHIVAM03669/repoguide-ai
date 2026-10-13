@@ -35,7 +35,7 @@ function severityToAnnotationLevel(
 
 function buildSummaryMarkdown(review: PullRequestReviewResult, outcome: ReviewOutcome): string {
   const lines = [
-    `## RepoPilot Review — ${outcome}`,
+    `## RepoGuide AI Review — ${outcome}`,
     '',
     review.summary.summary,
     '',
@@ -70,12 +70,12 @@ export class GitHubCheckPublisher implements ReviewPublisher {
     const conclusion = outcomeToCheckConclusion(args.outcome);
     const summary = buildSummaryMarkdown(args.review, args.outcome);
     const body = {
-      name: 'RepoPilot Review',
+      name: 'RepoGuide AI Review',
       head_sha: args.headSha,
       status: 'completed',
       conclusion,
       output: {
-        title: `RepoPilot Review — ${args.outcome}`,
+        title: `RepoGuide AI Review — ${args.outcome}`,
         summary
       }
     };

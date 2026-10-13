@@ -55,7 +55,7 @@ export const NAV_GROUPS: NavGroupDef[] = [
     label: 'Investigate',
     items: [
       { key: 'impact', href: '/impact', label: 'Impact Analysis', icon: Crosshair },
-      { key: 'ask', href: '/ask', label: 'Ask RepoPilot', icon: Lightning },
+      { key: 'ask', href: '/ask', label: 'Ask RepoGuide AI', icon: Lightning },
       { key: 'history', href: '/history', label: 'History', icon: ClockCounterClockwise },
       { key: 'reverse', href: '/reverse', label: 'Reverse prompt', icon: Path }
     ]
@@ -120,7 +120,7 @@ export function dashboardCommands(repoId: string): CommandDef[] {
     },
     {
       id: 'ask',
-      label: 'Ask RepoPilot',
+      label: 'Ask RepoGuide AI',
       path: `${base}/ask`,
       keywords: ['ai', 'question', 'chat']
     },

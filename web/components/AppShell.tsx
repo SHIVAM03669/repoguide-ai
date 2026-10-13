@@ -166,7 +166,7 @@ export function AppShell({
             <RepoPilotMark />
           </div>
           <div>
-            <div className="brand-title">RepoPilot</div>
+            <div className="brand-title">RepoGuide AI</div>
             <div className="brand-version">Technical Intelligence</div>
           </div>
         </Link>
@@ -286,7 +286,7 @@ export function AppShell({
                   <RepoPilotMark />
             </div>
             <div>
-              <div className="brand-title">RepoPilot</div>
+              <div className="brand-title">RepoGuide AI</div>
               <div className="brand-version">Technical Intelligence</div>
             </div>
           </Link>

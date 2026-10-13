@@ -99,7 +99,7 @@ export type FileImpactAnalysis = {
   relevantTests: ImpactTestRecommendation[];
   coChanges: Array<{ file: string; pairedWith: string; count: number }>;
   similarChanges?: SimilarChange[];
-  /** Classified local run commands (not executed by RepoPilot). */
+  /** Classified local run commands (not executed by RepoGuide AI). */
   testPlan?: ImpactTestPlan;
   hotspot: { score: number; changeCount: number; reasons: string[] } | null;
   checklist: string[];

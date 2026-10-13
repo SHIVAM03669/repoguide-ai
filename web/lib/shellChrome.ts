@@ -142,7 +142,7 @@ const HELP_BY_NAV: Record<NavKey, HelpTip> = {
   },
   mcp: {
     title: 'Agents on your graph',
-    body: 'Point Cursor or Claude Desktop at RepoPilot MCP so Ask, impact, and search run against this repo’s index.',
+    body: 'Point Cursor or Claude Desktop at RepoGuide AI MCP so Ask, impact, and search run against this repo’s index.',
     docHref: '/docs/mcp',
     docLabel: 'MCP setup',
     secondaryHref: '/docs/api-reference',

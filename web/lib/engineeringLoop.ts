@@ -86,8 +86,8 @@ export function engineeringLoopStages(args: {
       id: 'review',
       label: 'Review',
       blurb: pull
-        ? `Run RepoPilot review on PR #${pull}.`
-        : 'Run RepoPilot review on the PR detail page.',
+        ? `Run RepoGuide AI review on PR #${pull}.`
+        : 'Run RepoGuide AI review on the PR detail page.',
       href: pullHref
     },
     {
@@ -116,7 +116,7 @@ export function engineeringAgentBrief(args: {
     question: args.question ?? `what breaks if ${args.filePath} changes?`
   });
   return [
-    `# RepoPilot engineering loop brief`,
+    `# RepoGuide AI engineering loop brief`,
     `File: ${args.filePath}`,
     pull ? `Pull: #${pull}` : null,
     ``,
@@ -127,8 +127,8 @@ export function engineeringAgentBrief(args: {
     `## After the change`,
     `1. Re-open Impact for this file and copy Local run commands (testPlan).`,
     pull
-      ? `2. Review PR #${pull} on the pull detail page (trigger RepoPilot review if needed).`
-      : `2. Open a PR, then trigger RepoPilot review from the pull detail page.`,
+      ? `2. Review PR #${pull} on the pull detail page (trigger RepoGuide AI review if needed).`
+      : `2. Open a PR, then trigger RepoGuide AI review from the pull detail page.`,
     `3. Confirm blast radius / similar past PRs before merge.`,
     ``,
     `Graph blast (optional): architecture?file=${encodeURIComponent(args.filePath)}&blast=1`

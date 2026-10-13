@@ -2,6 +2,7 @@
 
 | Doc | Purpose |
 |-----|---------|
+| [PROJECT_GUIDE.md](./PROJECT_GUIDE.md) | Complete project explanation, use case, features, architecture, and setup needs |
 | [PRD.md](./PRD.md) | Product requirements |
 | [HLD.md](./HLD.md) | High-level system design |
 | [LLD.md](./LLD.md) | Modules, APIs, data model, pipelines |
